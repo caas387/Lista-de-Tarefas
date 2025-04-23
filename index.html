@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Lista De Tarefas</title>
+</head>
+<body>
+
+  
+
+    <div class="container">
+        <h1>Lista De Tarefas</h1>
+
+        <div class="inputs-container">
+
+            <input type="text" id="inputs-tarefas" placeholder="Adicione Uma Tarefa...">
+            <button id="add-tarefas">+</button>
+
+        </div><!--Fim da div de inputs-->
+
+        <div class="filtros">
+
+            <button class="filtros-btn" data-filtro="todas">Todas As Tarefas</button><!--Ver todas as tarefas-->
+            <button class="filtros-btn" data-filtro="pendentes">Pedentes</button><!--Ver as tarefas pedentes-->
+            <button class="filtros-btn" data-filtro="feitas">Concluídas</button><!--Ver as tarefas feitas-->
+
+        </div><!--Fim da div filtros-->
+
+        <ul id="lista-tarefas"></ul><!--Onde as tarefas irao aparecer-->
+
+        <button id="apagar-todas">Apagar Todas As Tarefas</button>
+
+    </div> <!--Fim da div container-->
+
+    <footer>
+        <p>&copy; Caas. Todos os direitos reservados.</p>
+    </footer>
+
+
+
+    <script src="script.js"></script>
+    
+</body>
+</html>

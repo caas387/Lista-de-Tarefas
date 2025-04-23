@@ -1,0 +1,211 @@
+@charset "UTF-8";
+
+.feitas span {
+    text-decoration: line-through;
+    color: #888;
+    opacity: 0.7;
+}
+
+/* Paleta "Minimal Zen" - foco, clareza e estilo */
+:root {
+    --cor-fundo: #101214;
+    --cor-container: #1E1F24;
+    --cor-primaria: #5EEAD4;
+    --cor-secundaria: #94A3B8;
+    --cor-destaque: #FACC15;
+    --cor-accent: #F472B6;
+    --cor-texto: #F8FAFC;
+    --blur-backdrop: blur(6px);
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.3s ease;
+  }
+  
+  body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: center; 
+    padding: 4rem 1rem;
+    position: relative;
+    overflow-x: hidden;
+  }
+  
+  .container {
+    background-color: var(--cor-container);
+    padding: 2.5rem;
+    border-radius: 1.25rem;
+    box-shadow: 0 0 30px rgba(94, 234, 212, 0.08);
+    max-width: 600px;
+    width: 100%;
+    backdrop-filter: var(--blur-backdrop);
+    animation: fadeIn 1s ease-out;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      padding: 2rem 1.5rem;
+    }
+    .inputs-container {
+      flex-direction: column;
+    }
+    .filtros {
+      flex-direction: column;
+    }
+    .filtros-btn {
+      width: 100%;
+    }
+    #lista-tarefas li {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+    #lista-tarefas li button {
+      width: 100%;
+    }
+    #apagar-todas {
+      font-size: 0.95rem;
+    }
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .container h1 {
+    text-align: center;
+    font-size: 2.25rem;
+    color: var(--cor-primaria);
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+  }
+  
+  .inputs-container {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  #inputs-tarefas {
+    flex: 1;
+    padding: 0.9rem;
+    border-radius: 0.75rem;
+    border: none;
+    background-color: #0F172A;
+    color: var(--cor-primaria);
+    font-size: 1rem;
+  }
+  
+  #add-tarefas {
+    padding: 0.9rem 1.4rem;
+    background-color: var(--cor-accent);
+    border: none;
+    border-radius: 0.75rem;
+    color: #000;
+    font-size: 1.3rem;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .filtros {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .filtros-btn {
+    flex: 1;
+    padding: 0.7rem;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: var(--cor-secundaria);
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.95rem;
+  }
+  
+  #lista-tarefas {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+  }
+  
+  #lista-tarefas li {
+    background-color: #0F172A;
+    padding: 1rem;
+    border-radius: 0.6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--cor-primaria);
+    font-size: 1rem;
+    animation: fadeItem 0.4s ease-in;
+    border-left: 4px solid var(--cor-primaria);
+  }
+  
+  @keyframes fadeItem {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  #lista-tarefas li.feitas {
+    text-decoration: line-through;
+    opacity: 0.6;
+    border-left-color: var(--cor-destaque);
+  }
+  
+  #lista-tarefas li button {
+    background-color: var(--cor-accent);
+    border: none;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    color: #000;
+    margin-left: 0.5rem;
+    font-weight: 600;
+    font-size: 0.85rem;
+  }
+  
+  #apagar-todas {
+    width: 100%;
+    padding: 0.85rem;
+    border-radius: 0.75rem;
+    border: none;
+    background-color: var(--cor-destaque);
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+    box-shadow: 0 0 10px rgba(250, 204, 21, 0.2);
+  }
+  
+  #toggle-musica {
+    display: none;
+  }
+   
+  footer {
+    background-color: var(--cor-container);
+    text-align: center;
+    color: var(--cor-texto);
+    font-size: 1rem;
+    margin-top: auto; /* Faz com que o footer sempre vá para o final da tela */
+  }
+
+ footer p {
+    margin: 0;
+    color: var(--cor-secundaria);
+  }
